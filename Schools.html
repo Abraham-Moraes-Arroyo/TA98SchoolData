@@ -1,11 +1,11 @@
-<center>
+ <center>
 <h1>Schools and Public Places in Little Village</h1>
   </center>
 <div id="googleMap" style="width:100%;height:400px;"></div>
  <div id="currentLocation">
   </div>
 <script>
-let map;
+let mapa;
 function myMap() {
 var mapProp= {
   // This has been changed to meet the requirment of being centered at little village
@@ -83,7 +83,7 @@ function showPosition(position) {
 <!-- Here is where I am going to populate the cards -->
 <script>
   // the collection of data that I have made
-let site="https://abraham-moraes-arroyo.github.io/TA98SchoolData/school.json"
+let wsite="https://abraham-moraes-arroyo.github.io/TA98SchoolData/school.json"
 // At the moment I am going to leave the .template as is, because I want to see how far I can get.
 let template=document.querySelector(".template");
 
@@ -96,9 +96,9 @@ document.querySelector("#googleMap").addEventListener("click", (event) =>{
     node.remove()
   });
 
-  // Here I am going to do a fetch request where I will take the weeb and then populate the cards.
+  // Here I am going to do a fetch request where I will take the web and then populate the cards.
 
-  fetch(site)
+  fetch(wsite)
   .then( (response) => {return response.json() })
   .then ((data) => {
     data.forEach((item) =>{
@@ -137,8 +137,8 @@ document.querySelector("#googleMap").addEventListener("click", (event) =>{
 <!-- Here is where I am going to be doing the research for the API endpooint -->
 <script>
   // Here is where I will place the link to the json file that I made
-  let  weeb= "https://abraham-moraes-arroyo.github.io/TA98SchoolData/school.json";
-  fetch (weeb)
+  let  web= "https://abraham-moraes-arroyo.github.io/TA98SchoolData/school.json";
+  fetch (web)
           .then ( ( response ) => { return response.json() })
           .then ( (data) => {
             // console.log(data)
